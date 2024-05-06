@@ -73,3 +73,50 @@ console.log(wordSentence);
 const sentenceLetters = sentence.split("");
 
 console.log(sentenceLetters);
+
+
+/*
+7.- Diseña un programa (función) que vaya leyendo números y 
+guardándolos en un array. Una vez lleno mostrará el array y 
+deberá decir cuantos números son pares y cuantos son impares.
+ La entrada de datos termina cuando el usuario teclea 0 o un valor no numérico. 
+ ( permite detectar valores no numéricos).
+*/
+
+
+let numbersList = [];
+let numbersByUser;
+let i=0;
+let even=0;
+let odd=0;
+
+
+function evenOrOddNumbers() {
+  
+  do {
+    numbersByUser = parseInt(prompt("Introduce varios numeros, si quieres dejar de introducir numero presiona una letra o 0"))
+    
+    
+    if (numbersByUser !==0 && !isNaN(numbersByUser)){
+      numbersList [i]= numbersByUser
+      i++;
+    }
+    //alert (`Tus numeros han sido ${numbersList}`)
+    
+  } while (numbersByUser !== 0 && !isNaN(numbersByUser));
+  
+  for (let i = 0; i < numbersList.length; i++) {
+    if (numbersList[i]%2 ===0)
+    {
+      even++;
+    }else{
+      odd++;
+    }
+  }
+  return console.log(`Tus numeros son estos: ${numbersList}
+   de los cuales hay pares: ${even} e impares hay ${odd}`);
+  
+}
+
+evenOrOddNumbers();
+  
