@@ -119,4 +119,59 @@ function evenOrOddNumbers() {
 }
 
 evenOrOddNumbers();
+
+
+
+
+/*8.- Un servicio de atención al cliente tiene establecido turnos semanales para sus empleados de manera que cada día de la semana
+ se encarga del servicio una persona: Lunes - María; Martes - Luis; Miércoles - Antonia; Jueves - Pedro; Viernes - Marisa; 
+ Sábado y Domingo - Sin Servicio. 
+ Usa un array para almacenar los datos del servicio. En este array cada elemento será un par [día - nombre].
+ Crea una función que responda con el nombre de la persona encargada del servicio sabiendo el día. 
+Si le pido servicio('Lunes') me debería decir "Este día se encarga María" y si le pido servicio(Miércoles") me daría Antonia. */
   
+
+
+let day;
+
+
+function servicesCustomer(day) {
+  day = prompt("Elige un dia para saber quien esta de servicio");
+
+  day = day.toLowerCase();
+
+  let employedDay = [["lunes", "maria"],["martes", "luis"], ["miercoles", "antonia"], ["jueves", "pedro"],["viernes", "marta"],["sabado","sin servicio"],["domingo","sin servicio"]];
+
+
+  for (let i=0; i<employedDay.length; i++){
+    if(employedDay[i][0]===day){
+      return alert(`Hoy le toca a trabajar a ${employedDay[i][1]}`);
+    }
+  }
+}
+
+servicesCustomer();
+
+
+/*9.- Una tienda vende monitores, teclados y ratones. Los precios se almacenan en una estructura array donde cada elemento es un par [producto - precio]. Diseña una función que reciba como argumento el nombre de un producto (minúscula o mayúscula) y devuelva su precio. Si la lista de precios es monitor: 200€, teclado: 20€ ratón: 10€, al pedir precio('monitor') me devolverá 200.
+*/
+
+let product;
+
+
+function marketTech(product) {
+  product = prompt("Elige un producto de la lista para saber su precio \n Productos: Monitor, teclado, raton");
+
+  product = product.toLowerCase();
+
+  let storageMarket = [["monitor", "200€"],["teclado", "20€"], ["raton", "10€"]];
+
+
+  for (let i=0; i<storageMarket.length; i++){
+    if(storageMarket[i][0]===product){
+      return alert(`Tu producto cuesta ${storageMarket[i][1]}`);
+    }
+  }
+}
+
+marketTech();
