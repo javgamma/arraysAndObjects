@@ -38,3 +38,23 @@ function checkCitizenShip(citizen) {
 }
 
 console.log(checkCitizenShip(citizen1));
+
+
+
+//4.. 
+
+const ciudadanos = [];
+
+function createCitizen(userName, userLastname, userAge){
+    ciudadanos.push({
+        name:userName,
+        lastname: userLastname,
+        age: userAge
+    });
+    return;
+}
+
+
+createCitizen("Jav","hernandez","34");
+
+console.log("Ciudadano creado:",ciudadanos);
